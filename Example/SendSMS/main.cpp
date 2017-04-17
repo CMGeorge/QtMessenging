@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     QtMessenging *qMessenging = new QtMessenging(&app);
-    qMessenging->sendMessage("0771796123","Mesaj Test Android");
+    qMessenging->sendMessage("0365400401","Mesaj Test Android");
     engine.load(QUrl(QLatin1String("qrc:/main.qml")));
 
     return app.exec();

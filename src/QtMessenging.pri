@@ -18,6 +18,10 @@ android{
     INSTALLS += QMESSENGING_JAVASRC
     DISTFILES += \
         $$PWD/android/src/ro/wesell/messenging/QtMessengingSMS.java
+}else: winrt{
+    INCLUDEPATH += $$PWD/winrt/
+    HEADERS += $$PWD/winrt/qtmessengingprivate.h
+    SOURCES += $$PWD/winrt/qtmessengingprivate.cpp
 }
 
 DISTFILES += \
