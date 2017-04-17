@@ -8,7 +8,7 @@ class QtMessenging : public QObject
     Q_OBJECT
 public:
     explicit QtMessenging(QObject *parent = 0);
-    void sendMessage(const QString &phoneNumber,const QString &message);
+    Q_INVOKABLE void sendMessage(const QString &phoneNumber,const QString &message);
 private:
     QtMessengingPrivate *m_qtMessengingPrivate;
 

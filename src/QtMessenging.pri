@@ -22,6 +22,16 @@ android{
     INCLUDEPATH += $$PWD/winrt/
     HEADERS += $$PWD/winrt/qtmessengingprivate.h
     SOURCES += $$PWD/winrt/qtmessengingprivate.cpp
+}else: ios{
+    QT += gui_private
+    INCLUDEPATH += $$PWD/ios/
+    HEADERS += \
+        $$PWD/ios/qtmessengingprivate.h
+    OBJECTIVE_SOURCES += \
+        $$PWD/ios/qtmessengingprivate.mm
+    LIBS += -framework Foundation \
+            -framework Messages \
+            -framework MessageUI
 }
 
 DISTFILES += \

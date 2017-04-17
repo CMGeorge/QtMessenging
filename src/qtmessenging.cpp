@@ -2,7 +2,7 @@
 #include <QDebug>
 QtMessenging::QtMessenging(QObject *parent) : QObject(parent)
 {
-    m_qtMessengingPrivate = new QtMessengingPrivate(this);
+    m_qtMessengingPrivate = new QtMessengingPrivate(/*this*/);
 }
 
 void QtMessenging::sendMessage(const QString &phoneNumber,const QString &message){
