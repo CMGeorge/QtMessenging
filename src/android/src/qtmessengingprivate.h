@@ -27,7 +27,8 @@ private:
 
 signals:
     void conversionIdChanged(int id);
-
+    void smsSent(bool status);
+    void smsReceived();
 public slots:
     void setConversionId(int id);
 

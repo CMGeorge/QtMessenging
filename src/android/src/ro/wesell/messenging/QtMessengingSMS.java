@@ -71,7 +71,7 @@ public class QtMessengingSMS extends BroadcastReceiver{
                 if (qtObject == 0)
                     return;
                 onMsgDelivered(qtObject, 0);
-                Toast.makeText(m_activity, "对方已经接收到短信", Toast.LENGTH_LONG).show();
+                Toast.makeText(m_activity, "SMS Sent", Toast.LENGTH_LONG).show();
             }
         }
     };
@@ -84,7 +84,7 @@ public class QtMessengingSMS extends BroadcastReceiver{
 
                 boolean sendSuccessed = (getResultCode() == Activity.RESULT_OK ? true : false);
                 onMsgSendOut(qtObject, 0, sendSuccessed);
-                Toast.makeText(m_activity, "短信发送" + (sendSuccessed ? "成功" : "失败"), Toast.LENGTH_LONG).show();
+                Toast.makeText(m_activity, "Delivered " + (sendSuccessed ? "YES" : "NO"), Toast.LENGTH_LONG).show();
             }
         }
     };
