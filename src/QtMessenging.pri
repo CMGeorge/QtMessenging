@@ -32,6 +32,12 @@ android{
     LIBS += -framework Foundation \
             -framework Messages \
             -framework MessageUI
+}else{
+    INCLUDEPATH += $$PWD/dummy/
+    HEADERS += \
+        $$PWD/dummy/qtmessengingprivate.h
+    SOURCES += \
+        $$PWD/dummy/qtmessengingprivate.cpp
 }
 
 DISTFILES += \
